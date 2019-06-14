@@ -22,5 +22,5 @@ public class FacturaCabecera {
     private char estado;
     private ArrayList<FacturaDetalle> detalle;
     private ArrayList<Clientes> cliente;
-    private Empleado empleado;
+    private Empleado empleado;   
 }

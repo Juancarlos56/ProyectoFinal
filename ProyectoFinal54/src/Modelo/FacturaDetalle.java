@@ -15,8 +15,7 @@ public class FacturaDetalle {
     private int id;
     private String descripcion;
     private int cantidad;
-    private ArrayList<Productos> producto;
-    
+    private ArrayList<Producto> producto;
     
     
 }

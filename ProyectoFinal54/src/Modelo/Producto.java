@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Carlos
  */
-public class Productos {
+public class Producto {
     private String codigoBarras;
     private String nombre;
     private String unidadCompra;
