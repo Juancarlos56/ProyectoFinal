@@ -21,6 +21,10 @@ public class Producto {
     private double pctDescuento; 
     private double precioUnitario;
 
+    public Producto() {
+        unidadVenta = new ArrayList<>();
+    }
+
     public String getCodigoBarras() {
         return codigoBarras;
     }
@@ -49,8 +53,8 @@ public class Producto {
         return unidadVenta;
     }
 
-    public void addUnidadVenta(ArrayList<String> unidadVenta) {
-        this.unidadVenta = unidadVenta;
+    public void addUnidadVenta(String unidadVenta) {
+        this.unidadVenta.add(unidadVenta);
     }
 
     public char getIva() {
@@ -84,6 +88,7 @@ public class Producto {
     public void setPrecioUnitario(double precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
+    
     
     
 }

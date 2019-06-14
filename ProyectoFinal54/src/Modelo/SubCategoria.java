@@ -11,14 +11,12 @@ import java.util.ArrayList;
  *
  * @author Carlos
  */
-public class FacturaDetalle {
+public class SubCategoria {
     private int id;
-    private String descripcion;
-    private int cantidad;
-    private double subtotal;
+    private String nombreSubCategoria;
     private ArrayList<Producto> productos;
 
-    public FacturaDetalle() {
+    public SubCategoria() {
         productos = new ArrayList<>();
     }
 
@@ -30,28 +28,12 @@ public class FacturaDetalle {
         this.id = id;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getNombreSubCategoria() {
+        return nombreSubCategoria;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
+    public void setNombreSubCategoria(String nombreSubCategoria) {
+        this.nombreSubCategoria = nombreSubCategoria;
     }
 
     public ArrayList<Producto> getProductos() {
@@ -60,11 +42,6 @@ public class FacturaDetalle {
 
     public void addProductos(Producto productos) {
         this.productos.add(productos);
-    }
-    
-    
-    public double calcularSubtotal(){
-        return 0;
     }
     
 }
