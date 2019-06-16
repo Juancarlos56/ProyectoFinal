@@ -51,6 +51,7 @@ public class VentanaEmpleado extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 204));
 
+        facturacion.setEditable(false);
         facturacion.setBackground(new java.awt.Color(0, 102, 204));
         facturacion.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         facturacion.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,6 +135,7 @@ public class VentanaEmpleado extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(0, 102, 204));
 
+        productos.setEditable(false);
         productos.setBackground(new java.awt.Color(0, 102, 204));
         productos.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         productos.setForeground(new java.awt.Color(255, 255, 255));
