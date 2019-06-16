@@ -12,15 +12,25 @@ import java.util.ArrayList;
  * @author Carlos
  */
 public class Cliente extends Persona{
+    private String cedula;
     private String tlfConvencional;
     private String tlfCelular;
     private ArrayList<Direccion> direcciones;
     private ArrayList<FacturaCabecera> facturas;
+    
 
     public Cliente() {
         super();
         direcciones = new ArrayList<>();
         facturas = new ArrayList<>();
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getTlfConvencional() {

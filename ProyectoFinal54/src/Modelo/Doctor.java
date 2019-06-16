@@ -12,28 +12,17 @@ import java.util.ArrayList;
  * @author Carlos
  */
 public class Doctor extends Persona{
-    private String direccion;
-    private ArrayList<Especialidad> especialidades;
+    private String correo;
 
     public Doctor() {
         super();
-        especialidades = new ArrayList<>();
-    }
-    
-    public String getDireccion() {
-        return direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public String getCorreo() {
+        return correo;
     }
 
-    public ArrayList<Especialidad> getEspecialidades() {
-        return especialidades;
+    public void setDireccion(String correo) {
+        this.correo = correo;
     }
-
-    public void addEspecialidades(Especialidad especialidades) {
-        this.especialidades.add(especialidades);
-    }
-
 }
