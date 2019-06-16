@@ -247,7 +247,6 @@ public class VentanaLogin extends javax.swing.JFrame {
         VentanaAdministradorLogin val = new VentanaAdministradorLogin();
         val.setVisible(true);
         dispose();
-        
     }//GEN-LAST:event_inicioAdmiMouseClicked
 
 
