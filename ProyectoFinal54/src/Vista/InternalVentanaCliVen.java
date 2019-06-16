@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Carlos
  */
-public class InternalVentanaCliAdmi extends javax.swing.JInternalFrame {
+public class InternalVentanaCliVen extends javax.swing.JInternalFrame {
 
     //Esto es solo para una prueba
     ArrayList<Cliente> clts = new ArrayList<>();
@@ -21,7 +21,7 @@ public class InternalVentanaCliAdmi extends javax.swing.JInternalFrame {
     /**
      * Creates new form VentanaCliAdmi
      */
-    public InternalVentanaCliAdmi() {
+    public InternalVentanaCliVen() {
         initComponents();
     }
 
@@ -67,7 +67,7 @@ public class InternalVentanaCliAdmi extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imaganes/usuarioD.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuarioD.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -262,7 +262,15 @@ public class InternalVentanaCliAdmi extends javax.swing.JInternalFrame {
             new String [] {
                 "ID", "Cedula", "Nombre", "Apellido", "Celular", "Telefono", "Direccion"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         tabla.setRowHeight(20);
         jScrollPane1.setViewportView(tabla);
 

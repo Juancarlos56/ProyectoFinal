@@ -35,7 +35,7 @@ public class VentanaEmpleado extends javax.swing.JFrame {
         cliente = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        facturacion2 = new javax.swing.JTextField();
+        productos = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -70,7 +70,7 @@ public class VentanaEmpleado extends javax.swing.JFrame {
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imaganes/facturaD.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/facturaD.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -110,7 +110,7 @@ public class VentanaEmpleado extends javax.swing.JFrame {
         });
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imaganes/usuarioP.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuarioP.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -134,26 +134,26 @@ public class VentanaEmpleado extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(0, 102, 204));
 
-        facturacion2.setBackground(new java.awt.Color(0, 102, 204));
-        facturacion2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        facturacion2.setForeground(new java.awt.Color(255, 255, 255));
-        facturacion2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        facturacion2.setText("Productos");
-        facturacion2.setBorder(null);
-        facturacion2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        facturacion2.addMouseListener(new java.awt.event.MouseAdapter() {
+        productos.setBackground(new java.awt.Color(0, 102, 204));
+        productos.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        productos.setForeground(new java.awt.Color(255, 255, 255));
+        productos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productos.setText("Productos");
+        productos.setBorder(null);
+        productos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        productos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                facturacion2MouseClicked(evt);
+                productosMouseClicked(evt);
             }
         });
-        facturacion2.addActionListener(new java.awt.event.ActionListener() {
+        productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                facturacion2ActionPerformed(evt);
+                productosActionPerformed(evt);
             }
         });
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imaganes/prod.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prod.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -162,16 +162,16 @@ public class VentanaEmpleado extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(facturacion2)
+                .addComponent(productos)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(facturacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(productos, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jLabel5)
         );
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imaganes/farmaciaP.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/farmaciaP.png"))); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -245,12 +245,16 @@ public class VentanaEmpleado extends javax.swing.JFrame {
     }//GEN-LAST:event_facturacionActionPerformed
 
     private void facturacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_facturacionMouseClicked
-        // TODO add your handling code here:
+        InternalVentanaFacturaVen ivfv = new InternalVentanaFacturaVen();
+        escritorio.add(ivfv);
+        ivfv.show();
+        
+        
     }//GEN-LAST:event_facturacionMouseClicked
 
     private void clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clienteMouseClicked
         System.out.println("ah perro");
-        InternalVentanaCliAdmi ivc = new InternalVentanaCliAdmi();
+        InternalVentanaCliVen ivc = new InternalVentanaCliVen();
         escritorio.add(ivc);
         ivc.show();
         
@@ -262,13 +266,16 @@ public class VentanaEmpleado extends javax.swing.JFrame {
         
     }//GEN-LAST:event_clienteActionPerformed
 
-    private void facturacion2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_facturacion2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_facturacion2MouseClicked
+    private void productosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productosMouseClicked
+        System.out.println("IVPA");
+        InternalVentanaProVen ivpa = new InternalVentanaProVen();
+        escritorio.add(ivpa);
+        ivpa.show();
+    }//GEN-LAST:event_productosMouseClicked
 
-    private void facturacion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facturacion2ActionPerformed
+    private void productosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_facturacion2ActionPerformed
+    }//GEN-LAST:event_productosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,7 +316,6 @@ public class VentanaEmpleado extends javax.swing.JFrame {
     private javax.swing.JTextField cliente;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JTextField facturacion;
-    private javax.swing.JTextField facturacion2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -319,5 +325,6 @@ public class VentanaEmpleado extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JTextField productos;
     // End of variables declaration//GEN-END:variables
 }
