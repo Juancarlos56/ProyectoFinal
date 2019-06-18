@@ -16,7 +16,7 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hola mundo Prueba Pull      ");
+        System.out.println("Hola mundo Prueba Pullshing      ");
         VentanaLogin v = new VentanaLogin();
         v.setVisible(true);
              
